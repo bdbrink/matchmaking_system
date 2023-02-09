@@ -57,7 +57,7 @@ def handle_match(c1, c2):
 
 # when client is started this will prompt the user
 def handle_client(c):
-    config_string = client.recv(1024)
+    config_string = client.recv(1024).decode()
     config = config_string[:config_string.rfind("-")]
     role = config_string[:config_string.rfind("-")+1:]
     
